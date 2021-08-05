@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <h1>Movies</h1>
+    {% for movie in movies %}
+        <article class="media content-section">
+          <div class="media-body">
+            <!--<h5><a class="article-title" href="#">{{ movie.title }}</a></h5>-->
+              <input type="checkbox" id="movie" name="movie">
+              <label for="movie">{{ movie.title }}</label>
+          </div>
+        </article>
+    {% endfor %}
+
+    <h1>TV Shows</h1>
+    {% for series in series %}
+        <article class="media content-section">
+          <div class="media-body">
+            <!--<h5><a class="article-title" href="#">{{ series.title }}</a></h5>-->
+              <input type="checkbox" id="show" name="show">
+              <label for="show">{{ series.title }}</label>
+          </div>
+        </article>
+    {% endfor %}
+
+{% endblock content%}
